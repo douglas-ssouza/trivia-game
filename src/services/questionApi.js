@@ -5,6 +5,7 @@ const endpoint = ({ category, difficulty, type }) => {
   if (type) point += `&type=${type}`;
   return point;
 };
+
 const questionApi = async (token, congif) => {
   const response = await fetch(`${endpoint(congif)}&${token}`);
   const json = await response.json();
